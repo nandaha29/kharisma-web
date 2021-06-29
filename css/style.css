@@ -1,0 +1,276 @@
+/* import FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;900&display=swap");
+
+/* ------------Variabels --------------*/
+:root {
+  --main-color: #ef9e11;
+  --gray: #415161;
+  --gray-dark: #2d3e50;
+  --gray-light: #92a2a2;
+  --blue: #4b96d9;
+  --white-dark: #edf1f4;
+  --white: #ffffff;
+  --green: #92be33;
+  --blue-dark: #007bab;
+}
+
+/* ------------Global Settings --------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  /* max-width: 1500px; */
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2 {
+  font-weight: 600;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  /* max-width: 1500px; */
+}
+
+.sec-padding {
+  padding: 80px 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+/* ------------------ Navbar ---------------------- */
+nav ul {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ------------------ Jumbotron ---------------------- */
+.jumbotron {
+  background-image: url(../assets/img/homepage-header-1.png);
+  height: 700px;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.title {
+  margin-top: 200px;
+  color: var(--white);
+}
+.title h1 {
+  font-size: 80px;
+}
+.title p {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+/* ------------------ WEARE ---------------------- */
+.weare-section {
+  min-height: 300px;
+  background-color: var(--gray-dark);
+}
+.weare-section .weare-text {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.weare-text h1 {
+  color: var(--main-color);
+}
+.weare-text h2 {
+  font-weight: 300;
+  color: var(--white);
+}
+.weare-text p {
+  color: var(--gray-light);
+}
+.weare-text span {
+  color: var(--white);
+}
+
+/* ------------------ COURSE ---------------------- */
+.course-section {
+  min-height: 300px;
+  width: 100%;
+  font-family: "Source Code Pro", monospace;
+  border: 1px solid var(--gray-dark);
+}
+.course-section .course-card {
+  border-right: 1px solid var(--gray-dark);
+  border-left: 1px solid var(--gray-dark);
+}
+.course-section .course-text {
+  padding-top: 20px;
+}
+.course-section h3 {
+  text-transform: uppercase;
+}
+.course-section p {
+  font-weight: 300;
+}
+
+/* ------------------ GALLERRY ---------------------- */
+.gallery-section {
+  min-height: 1000px;
+}
+.gallery-section .gallery-text {
+  padding: 50px 0;
+}
+.gallery-img ul {
+  float: left;
+}
+.gallery-img li {
+  /* overflow: hidden; */
+  float: left;
+  /* position: relative; */
+}
+.gallery-item img {
+  padding: 0;
+  width: 379.5px;
+  height: auto;
+}
+
+.gallery-img li span {
+  display: block;
+  width: 379.5px;
+  height: 379.5px;
+  background-color: rgba(241, 161, 12, 0.5);
+}
+.gallery-item a {
+  display: inline-block;
+  position: relative;
+}
+
+.gallery-item span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 379.5px; /*secara vertikal*/
+  color: var(--white);
+  text-shadow: 1px 1px var(--gray-light);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+/* supaya keluar ketika di hover */
+.gallery-item a:hover span {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ------------------ OVERLAY ---------------------- */
+.overlay {
+  position: fixed;
+  /* supaya posisi penuh 1 layar */
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 999;
+  transition: 0.8s;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  padding: 100px;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+}
+.overlay:target img {
+  animation: zoomDanFade 1s;
+}
+.overlay .close {
+  position: absolute;
+  bottom: 200px;
+  opacity: 0;
+}
+.overlay:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+
+/* ------------------ ANIMATION ---------------------- */
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* ------------------ TESTI ---------------------- */
+
+.testi-section .testi-title {
+  padding: 0 0 50px 0;
+}
+
+.testi-text h4 {
+  padding: 20px 0;
+}
+.testi-text p {
+  color: var(--gray-light);
+}
+
+/* ------------------ PARTNER ---------------------- */
+.partner-section .partner-title {
+  padding: 0 0 50px 0;
+}
+.partner-section .partner-area {
+  padding: 50px 0;
+}
+.partner-area .partner-text {
+  /* background-color: red; */
+  padding: 50px 0;
+}
+.partner-text img {
+  padding: 50px 0;
+}
+.partner-text p {
+  color: var(--gray-light);
+}
