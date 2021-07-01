@@ -274,3 +274,20 @@ nav ul {
 .partner-text p {
   color: var(--gray-light);
 }
+
+/* ------------------ BANNER ---------------------- */
+.banner-img img {
+  display: block;
+  width: 1520px;
+  height: 100%;
+  background-color: rgb(255, 166, 0.5);
+}
+.banner-text h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 1520px; /*secara vertikal*/
+  color: var(--white);
+  text-shadow: 1px 1px var(--gray-light);
+}
