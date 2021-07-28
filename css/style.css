@@ -274,6 +274,29 @@ nav ul {
 .partner-text p {
   color: var(--gray-light);
 }
+.partner-img span {
+  position: absolute;
+  /* top: 999px; */
+  /* left: 190px; */
+  width: 150px;
+  height: 30px;
+  display: block;
+  text-align: center;
+  background-color: red;
+  line-height: 20px;
+  /* opacity: .50; */
+  /* transition: .3s; */
+  /* line-height: 120px; secara vertikal */
+  /* color: var(--white); */
+  /* text-shadow: 1px 1px var(--gray-light); */
+  /* opacity: 0; */
+  transition: all 0.5s ease-in-out;
+}
+/* supaya keluar ketika di hover */
+partner-img a:hover  span {
+  opacity: 1;
+  transition: 0.3s;
+}
 
 /* ------------------ BANNER ---------------------- */
 .banner-img img {
