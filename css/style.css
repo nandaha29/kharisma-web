@@ -274,29 +274,6 @@ nav ul {
 .partner-text p {
   color: var(--gray-light);
 }
-.partner-img span {
-  position: absolute;
-  /* top: 999px; */
-  /* left: 190px; */
-  width: 150px;
-  height: 30px;
-  display: block;
-  text-align: center;
-  background-color: red;
-  line-height: 20px;
-  /* opacity: .50; */
-  /* transition: .3s; */
-  /* line-height: 120px; secara vertikal */
-  /* color: var(--white); */
-  /* text-shadow: 1px 1px var(--gray-light); */
-  /* opacity: 0; */
-  transition: all 0.5s ease-in-out;
-}
-/* supaya keluar ketika di hover */
-partner-img a:hover  span {
-  opacity: 1;
-  transition: 0.3s;
-}
 
 /* ------------------ BANNER ---------------------- */
 .banner-img img {
@@ -305,12 +282,51 @@ partner-img a:hover  span {
   height: 100%;
   background-color: rgb(255, 166, 0.5);
 }
-.banner-text h1 {
+
+.banner-section .banner-img h2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  line-height: 1520px; /*secara vertikal*/
+  width: 100%;
+  top: 4105px;
+}
+.banner-img h2 {
+  font-weight: 300;
+  font-size: 3rem;
+  position: relative;
   color: var(--white);
   text-shadow: 1px 1px var(--gray-light);
+}
+.banner-img a {
+  font-weight: 500;
+  color: var(--gray-light);
+}
+
+/* ------------------ CONTACT ---------------------- */
+.contact-section {
+  padding: 60px 0 60px 0;
+  background-color: var(--gray-dark);
+  color: var(--white-dark);
+}
+.contact-section .contact-text {
+  font-weight: 300;
+}
+.contact-text h3 {
+  font-size: 1rem;
+  padding: 10px 0;
+  font-weight: 300;
+}
+.contact-text p {
+  font-size: 0.9rem;
+}
+
+/* ------------------ FOOTER ---------------------- */
+.footer-section {
+  padding: 50px 0 30px 0;
+}
+.footer-text h3 {
+  color: var(--gray-light);
+  font-weight: 300;
+  font-size: 1rem;
+}
+.footer-img {
+  top: 20px;
 }
